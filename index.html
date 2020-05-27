@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Card Game v1.1 | The Art of Web</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="/css-animation.css">
+	<style type="text/css">
+
+	  #stage {
+	  	position:relative;
+	  	width:100%; 
+	    border: 1px solid #ccc;
+	    margin:0 auto;
+	    
+	   
+	  }
+
+	  #felt {
+	    position: relative;
+        margin: 100 0 0 50px;
+        height: 530px;
+	    background:url('img/banner2.jpg');
+	    background-repeat: no-repeat;
+	    background-size: 100% 550px;
+	  }
+
+	   /*#felt div img {
+	   	opacity :.6;
+	   }*/
+ 
+ 
+	  #felt div {
+	    position: absolute;
+	    width: 180px;
+	    height: 130px;
+	    top:20px;
+	    left:20px;
+	    border:2px solid #ccc;
+	    opacity:1.0;
+	    -webkit-transition: 0.5s ease-in-out;
+	    -moz-transition: 0.5s ease-in-out;
+	    -o-transition: 0.5s ease-in-out;
+	    transition: 0.5s ease-in-out;
+	  }
+
+	  .container1{
+	  	display: flex;
+ 		justify-content: center;
+ 		align-items: center;
+ 		width: 100%;
+ 		height: 40px;
+ 		border-top: solid 1px #ccc;
+ 		background: #e6e6ff;
+ 		 }
+
+	  .boton{
+	  	  
+	  	 padding:5px 20px;
+	  	 border:solid 2px #ccc;
+	  	 border-radius: 10px;
+	  	 color:white;
+	  	 width:250px;
+	  	 color:white;
+	  	 font-size: 1.2em;
+	  	 background: gray;
+	  }
+ 	   .separar{
+ 	   	  	  padding-right: 300px;
+ 	   	}
+
+ 	   	/* Cabecera de la pagina */
+        
+         .cabecera{
+	  	display: flex;
+ 		width: 100%;
+ 		height: 320px;
+  		}
+ 	   	 
+ 	   	.columna75{ 
+ 	   		width: 80%;
+ 	   		height: 312px;
+ 	   		border:solid 1px #ccc;
+ 	   		background-image: url(img/portada1.jpg);
+ 	   		background-size: 100% 318px
+ 	   	}
+ 	   	.columna25{ 
+ 	   		width: 20%;
+ 	   		height: 312px;
+ 	   		border:solid 1px #ccc;
+ 	   		background-image: url(img/portada2.png);
+ 	   		background-size: 100% 318px
+ 	   	}
+ 	   	/*----------------Estilos Footer ----------*/
+		.main-footer {
+			background: #151515;
+			color: white;
+			padding: 10px;
+			font-size: .8em;
+		}
+		.copy{
+			text-align: center;
+			margin: auto;
+			margin-top: 15px;
+		}
+		.main-footer [class*="icon-"] {
+			color: white;
+		 	text-decoration: none;
+		 	
+		}
+		.main-footer [class*="icon-"]:before {
+			position: relative;
+			top: 3px;
+			right: 5px;
+		}
+		.columna33{
+			width: 22%
+		}
+		.columna50{
+			width: 50%
+		}
+		.column__title{
+		font-size: 1.3em;
+		}
+		.column__txt{
+		font-size: 1.2em;
+		}
+		.container--flex1{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		}
+		.titulojuego{
+		width:100%;	
+		height: 35px;
+		text-align: center;
+		font-size: 1.2em;
+		}
+
+	</style>
+</head>
+
+
+<body>
+<div class="cabecera">
+		<div class="columna25">	
+			<h2></h2>
+		</div>
+		<div class="columna75  ">
+			<h2></h2>	
+		</div>
+</div>	
+<br>
+<div class="titulojuego">
+			<h3>Juego de Memoria Version -1.0</h3>
+</div>	
+<div id="stage">	 
+	 
+	<div id="felt">
+			<div id="card_0"><img onclick="cardClick(0);" src=" img/back.png"></div>
+			<div id="card_1"><img onclick="cardClick(1);" src=" img/back.png"></div>
+			<div id="card_2"><img onclick="cardClick(2);" src=" img/back.png"></div>
+			<div id="card_3"><img onclick="cardClick(3);" src=" img/back.png"></div>
+			<div id="card_4"><img onclick="cardClick(4);" src=" img/back.png"></div>
+			<div id="card_5"><img onclick="cardClick(5);" src=" img/back.png"></div>
+			<div id="card_6"><img onclick="cardClick(6);" src=" img/back.png"></div>
+			<div id="card_7"><img onclick="cardClick(7);" src=" img/back.png"></div>
+			<div id="card_8"><img onclick="cardClick(8);" src=" img/back.png"></div>
+			<div id="card_9"><img onclick="cardClick(9);" src=" img/back.png"></div>
+			<div id="card_10"><img onclick="cardClick(10);" src=" img/back.png"></div>
+			<div id="card_11"><img onclick="cardClick(11);" src=" img/back.png"></div>
+			<div id="card_12"><img onclick="cardClick(12);" src=" img/back.png"></div>
+			<div id="card_13"><img onclick="cardClick(13);" src=" img/back.png"></div>
+			<div id="card_14"><img onclick="cardClick(14);" src=" img/back.png"></div>
+			<div id="card_15"><img onclick="cardClick(15);" src=" img/back.png"></div>
+			<div id="card_16"><img onclick="cardClick(16);" src=" img/back.png"></div>
+			<div id="card_17"><img onclick="cardClick(17);" src=" img/back.png"></div>
+	</div>
+	<div class="container1"  >
+		<h4 class="separar">Para empezar el juego ,digite click en la carta !!!</h4>
+		<button class="boton" id='boton1' onclick="inicio();">Nuevo Juego</button>
+ 	</div>
+</div>
+<br>
+<footer class="main-footer">
+	<div class="container container--flex1">
+		<div class="columna50">
+			<h2 class="column__title">Quienes somos?</h2>
+			<p class="column__txt">      Somos una empresa familiar que se creo en el año 2001 , los fundadores de la empresa son mis hijos Adriel Peña Medina Ingeniero en Telecomunicaciones , Yennifer Peña Alvarez estudiante de Ingenieria de Informatica y mi persona Salustio Peña Salazar Ingeniero de Sistemas . Nuestro objetivo fue dar un servicio de calidad en el area de la computacion , la telefonia celular y los sistemas administrativos. Ahora queremos brindar ese servicio en los Estados Unidos .
+			 </p>
+		</div>
+		<div class="columna33">
+			<h2 class="column__title">Contactanos :</h2>
+			<p class="column__txt">1686 Hulton Road</p>
+			<p class="column__txt">Telefono :+1 412-5189274</p>
+			<p class="column__txt">salustiop@hotmail.com</p>
+			<p class="column__txt">salustio2803@hotmail.com</p>
+		</div>
+		<div class="columna33">
+			<h2 class="column__title">Siguenos en nuestras redes :</h2>
+			<p class="column__txt"><a href="" class="icon-facebook">Facebook</a></p>
+			<p class="column__txt"><a href="" class="icon-twitter">Siguenos en Twitter</a></p>
+			<p class="column__txt"><a href="" class="icon-youtube">Visita nuestro canal</a></p>
+		</div>
+		<p class="copy">Juego de Meroria V-1.0 | 2020 Salustio Peña | Todos los derechos reservados </p>
+	</div>
+
+</footer> 
+<script type="text/javascript" src="css-animation.js"></script>
+<script type="text/javascript">
+
+  // Original JavaScript code by Chirp Internet: www.chirp.com.au
+  // Please acknowledge use of this code by including this header.
+
+
+  var card_value = ['1C','2C','3C','4C','5C','6C','7C','8C','9C','1H','2H','3H','4H','5H','6H','7H','8H','9H'];
+
+  // set default positions
+  var card_left = [];
+  var card_top = [];
+
+  for(var i=0; i < 18; i++) {
+    card_left[i] = 20 + 220 * (i%6);
+    card_top[i] = 20 + 170 * Math.floor(i/6);
+  }
+
+  var started = false;
+  var cards_turned = 0;
+  var matches_found = 0;
+  var card1 = false;
+  var card2 = false;
+  
+  function inicio(){
+  	location.reload();
+  }
+  
+  function moveToPlace(id)
+  {
+    var el = document.getElementById("card_" + id);
+    el.style["z-index"] = "1000";
+    el.style["left"] = card_left[id] + "px";
+    el.style["top"] = card_top[id] + "px";
+    el.style["z-index"] = "0";
+  }
+
+  function hideCard(id)
+  {
+    var el = document.getElementById("card_" + id);
+    el.firstChild.src = " img/back.png";
+    el.style["WebkitTransform"] = "scale(1.0)";
+  }
+
+  function moveToPack(id)
+  {
+    hideCard(id);
+    var el = document.getElementById("card_" + id);
+    el.style["z-index"] = "1000";
+    el.style["left"] = "-200px";
+    el.style["top"] = "190px";
+    el.style["z-index"] = "0";
+  }
+
+  // flip over card and check for match
+  function showCard(id)
+  {
+    if(id === card1) return;
+    var el = document.getElementById("card_" + id);
+    el.firstChild.src ="img/" +card_value[id] + ".png";
+    el.style["WebkitTransform"] = "scale(1.2)";
+    if(++cards_turned == 2) {
+      card2 = id;
+      // check whether both cards have the same value
+      if(parseInt(card_value[card1]) == parseInt(card_value[card2])) {
+        setTimeout("moveToPack(" + card1 + "); moveToPack(" + card2 + ");", 1000);
+        if(++matches_found == 9) {
+          // game over
+          matches_found = 0;
+          started = false;
+        }
+      } else {
+        setTimeout("hideCard(" + card1 + "); hideCard(" + card2 + ");", 800);
+      }
+      card1 = card2 = false;
+      cards_turned = 0;
+    } else {
+      card1 = id;
+    }
+  }
+
+  function cardClick(id)
+  {
+    if(started) {
+      showCard(id);
+    } else {
+      // shuffle and deal cards
+      card_value.sort(function() { return Math.round(Math.random()) - 0.5; });
+      for(i=0; i < 18; i++) setTimeout("moveToPlace(" + i + ")", i * 100);
+      started = true;
+    }
+  }
+
+</script>	
+</body>
+</html>
